@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Breast Cancer Detector</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/breastCancer.css')}}">
+    
+    <!-- <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/breastCancer.css"> -->
+    
+   
+  	
+  </head>
+<body>
+
+<!-- <div id="fullback">
+
+<div class="page-header" id="mainheadingdiv">
+	<h5 id="welcometext">WELCOME TO</h5>
+	<h1 id="mainheading">Prostate Cancer <br>Detector</h1>
+	<br>
+	<div><a href="#formdiv"><div id="runapp">Start App</div></a></div>
+	
+</div>
+
+</div>
+
+<div id="formdiv" class="row">
+
+
+<div id="formtext">Our Python code will use the values of the given parameters to make the prediction. <br><br> Fill in the values and run the program.</div>
+
+<div id="formtable">
+
+<form method="POST" action="result">
+
+	<table>
+		<tr>	
+			<th><label>Radius</label></th>
+			<th><input type="number" step="0.0001" name="Radius" value={{request.form.Radius}}></th>
+		</tr>
+		<tr>
+			<th><label>Texture</label></th>
+			<th><input type="number" step="0.0001" name="Texture" value={{request.form.Texture}}></th>
+		</tr>
+		<tr>
+			<th><label>Perimeter</label></th>
+			<th><input type="number" step="0.0001" name="Perimeter" value={{request.form.Perimeter}}></th>
+		</tr>
+		<tr>
+			<th><label>Area</label></th>
+			<th><input type="number" step="0.0001" name="Area" value={{request.form.Area}}></th>
+		</tr>
+		<tr>
+			<th><label>Smoothness</label></th>
+			<th><input type="number" step="0.0001" name="Smoothness" value={{request.form.Smoothness}}></th>
+		</tr>
+		<tr>
+			<th><label>Compactness</label></th>
+			<th><input type="number" step="0.0001" name="Compactness" value={{request.form.Compactness}}></th>
+		</tr>
+		<tr>
+			<th><label>Symmetry</label></th>
+			<th><input type="number" step="0.0001" name="Symmetry" value={{request.form.Symmetry}}></th>
+		</tr>
+		<tr>
+			<th><label>Fractal Dimension</label></th>
+			<th><input type="number" step="0.0001" name="Fractual_Dimension" value={{request.form.Fractual_Dimension}}></th>
+		</tr>
+			
+
+	</table>
+
+	<div id="submittext">
+	<button type="submit">Run</button>
+	</div>
+	
+</form>
+
+</div>
+</div> -->
+
+
+
+<div class="center">
+    <h1 class="text-center">Fill in the details to use the classifier</h1>
+    <form method="POST" action="result_breast_cancer">
+    <div class="row">
+        <div class="col-sm">
+            <div class="inputbox">
+                <input type="number" required="required" step="0.0001" name="radius_mean" value={{request.form.radius_mean}}>
+                <span>Mean Radius</span>
+              </div>
+              <div class="inputbox">
+                <input type="number" required="required" step="0.0001" name="texture_mean" value={{request.form.texture_mean}}>
+                <span>Mean Texture</span>
+              </div>
+              <div class="inputbox">
+                <input type="number" step="0.0001" required="required" name="smoothness_mean" value={{request.form.smoothness_mean}}>
+                <span>Mean Smoothness</span>
+              </div>
+              <div class="inputbox">
+                <input type="number" step="0.0001" required="required" name="symmetry_mean" value={{request.form.symmetry_mean}}>
+                <span>Mean Symmetry</span>
+              </div>
+              <div class="inputbox">
+                <input type="submit" value="Run">
+              </div>
+
+        </div>
+    <div class="col-sm">
+    
+    
+    
+      <div class="inputbox">
+        <input type="number" required="required" step="0.0001" name="fractal_dimension_mean" value={{request.form.fractal_dimension_mean}}>
+        <span>Mean Fractal Dimension</span>
+      </div>
+      <div class="inputbox">
+        <input type="number" required="required" step="0.0001" name="texture_se" value={{request.form.texture_se}}>
+        <span>Texture SE</span>
+      </div>
+      <div class="inputbox">
+        <input type="number" required="required"  step="0.0001" name="smoothness_se" value={{request.form.smoothness_se}}>
+        <span>Smoothness SE</span>
+      </div>
+      <div class="inputbox">
+        <input type="number" required="required" step="0.0001" name="symmetry_se" value={{request.form.symmetry_se}}>
+        <span>Symmetry SE</span>
+      </div>
+      
+    
+</div>
+
+</div>
+
+</form>
+  </div>
+</body>
+</html>
