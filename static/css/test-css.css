@@ -1,0 +1,22 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#tools {
+    margin-top:0%;
+}
+
+/* .card-body:hover{
+    font-size: 120%;
+    
+} */
+
+.card-img-top:hover{
+    /* transform: scale(1.2); */
+    position:relative;
+    top:-10px;
+}
+
+.img-gradient{
+    
+}

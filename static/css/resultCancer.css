@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(105, 0, 0), rgb(255, 18, 18));
+}
+
+.backButton{
+    
+    padding-top: 15px;
+}
+
+a {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 50%;
+    border-radius: 5px;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg, rgb(255, 18, 18),rgb(105, 0, 0));
+}
+
+.container{
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+
+span{
+    color: red;
+}
